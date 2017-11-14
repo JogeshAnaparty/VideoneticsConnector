@@ -1,0 +1,6 @@
+Open a command prompt and then use the signtool.exe:
+(Microsoft Windows Software Development Kit (SDK) must be installed) 
+
+signTool sign /f path_to_your_PFX_file /p your_PFX_file_password /tr http://tsa.starfieldtech.com /td SHA256 path_to_the_file_you_want_to_sign
+
+Wildcards (*) are allowed for "path_to_the_file_you_want_to_sign" like for example "c:\my_build_folder\*.dll" or "c:\my_build_folder\*.exe"

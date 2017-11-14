@@ -1,0 +1,123 @@
+﻿[
+	{
+		"entity_type_templates": [
+      {
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "folder-o",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "dem"
+        },
+        "attributes": null,
+        "childable_types": {
+          "allow_all": false,
+          "same_as_parent": false,
+          "allowed_types": []
+        },
+        "description": "Description of the asset",
+        "display_name": "Asset",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "Asset",
+        "operations": [
+          "create",
+          "read_coc",
+          "read_media",
+          "update",
+          "read_metadata",
+          "update_metadata"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "visible": true,
+        "system_type": "asset",
+        "is_public": false
+      },
+			{
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "folder-open-o",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "dem"
+        },
+				"attributes": null,
+				"childable_types": {
+					"allow_all": false,
+					"same_as_parent": false,
+					"allowed_types": [
+					]
+				},
+				"description": "Description of the evidence",
+				"display_name": "Evidence",
+				"enabled": true,
+				"create_one_on_module_added": true,
+				"name": "Evidence",
+				"system_type": "evidence",
+        "operations": [
+          "create",
+          "update",
+          "read_coc",
+          "read_media",
+          "read_metadata",
+          "update_metadata"
+        ],
+				"persistence_on_map": null,
+				"refresh_intervals": 5,
+				"visible": true,
+				"is_public": false
+			},
+      {
+        "appearance": {
+          "color": "#1ab394",
+          "icon": "shopping-bag",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "dem"
+        },
+        "attributes": null,
+        "childable_types": {
+          "allow_all": false,
+          "same_as_parent": false,
+          "allowed_types": [
+            "evidence"
+          ]
+        },
+        "description": "Description of the case",
+        "display_name": "Case",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "has_area": false,
+        "create_one_on_module_added": true,
+        "has_tracking": false,
+        "name": "Case",
+        "operations": [
+          "create",
+          "update",
+          "read_coc",
+          "download",
+          "read_metadata",
+          "update_metadata",
+          "add_evidence"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "visible": true,
+        "system_type": "case",
+        "is_public": false
+      }
+		],
+		"friendly_name": "DEM",
+		"i18n_key": "dem",
+		"id": "dem",
+			"operations": [
+				// The operations in this section ar not related to some entity type
+				"upload_media"
+			]
+	}
+]

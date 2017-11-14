@@ -1,0 +1,20 @@
+﻿{
+  "Active": true,
+  "Attributes": {
+    "vendor_authentication": {
+      "value": "basic"
+    }
+  },
+  "BrandId": "genetec_securitycenter_5_5",
+  "description": "Genetec Security Center 5.5 @ local lab",
+  "domain_id": "596f28721b4b1b4f389f25d7",
+  "Enabled": true,
+  "IPAddress": "192.168.1.112",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "Genetec SC 5.5 Test",
+  "Password": "admin",
+  "Port": 5500,
+  "site_id": "5555",
+  "Username": "admin"
+}

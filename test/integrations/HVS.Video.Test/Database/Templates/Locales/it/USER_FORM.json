@@ -1,0 +1,10 @@
+{
+    "FIRST_NAME_LABEL": "Nome di battesimo",
+    "LAST_NAME_LABEL": "Cognome",
+    "EMAIL_LABEL": "E-mail",
+    "OLD_PW_LABEL": "Vecchia password",
+    "NEW_PW_LABEL": "nuova password",
+    "RETYPE_PW_LABEL" : "Conferma Password",
+    "SAVE_LABEL" : "Salvare",
+    "RESET_LABEL" : "Reset"
+}

@@ -1,0 +1,29 @@
+{
+	"LOADING_MSG" : "...Loading",
+	"OBJECTS" : 
+	{
+		"LABEL" : "OBJECTS",
+	    "SUB_MENUS" :
+		{
+			"Camera": "Camera",
+			"Gateway": "Gateway",
+			"VMS": "VMS",
+			"Evidence": "Evidence",
+			"Asset": "Asset",
+			"Case": "Case"
+		}
+	},
+	"SYSTEM" : 
+	{
+		"LABEL" : "SYSTEM",
+		"SUB_MENUS" : 
+		{
+			"MEMBERSHIPS": "MEMBERSHIPS",
+			"DOMAIN_DETAILS": "DOMAIN DETAILS",
+			"ENTITY_TYPES": "ENTITY TYPES",
+			"GATEWAYS": "GATEWAYS",
+			"IMPERSONATE": "IMPERSONATE",
+			"MAPS": "MAPS"
+		}
+	}
+}

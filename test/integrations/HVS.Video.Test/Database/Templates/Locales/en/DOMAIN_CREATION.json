@@ -1,0 +1,28 @@
+{
+	"DOMAIN_TITLE" : "DOMAIN",
+	"SAVE_BUTTON" : "Save",
+	"NAME_LABEL" : "Name",
+	"DNS_LABEL" : "Dns",
+	"USER_NAME_LABEL" : "User Name",
+	"EMAIL_LABEL" : "Email",
+	"TIME_ZONE_LABEL" : "TimeZone",
+	"TIME_ZONE_PLACE_HOLDER" : "Select timezone...",
+	"DOMAIN_ID_LABEL" : "DomainId",
+	"ENABLED_LABEL" : "Enabled",
+	"LICENSE" :
+	{
+		"LICENSES_TITLE" : "LICENSES",
+		"NEW_BUTTON" : "New",
+		"SAVE_BUTTON" : "Save",
+		"ID_LABEL" : "Id",
+		"EXPIRATION_LABEL" : "Expiration",
+		"EXPIRATION_PLACE_HOLDER" : "MM/DD/YYYY",
+		"EXPIRY_LABEL": "Expiry",
+		"NAME_LABEL" : "Name",
+		"MODULES" :
+		{
+			"MAP" : "Maps & Layers",
+			"DEM" : "DEM"
+		}
+	}
+}

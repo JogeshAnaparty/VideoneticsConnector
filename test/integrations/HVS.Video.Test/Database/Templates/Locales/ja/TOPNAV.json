@@ -1,0 +1,11 @@
+{
+    "TAB_MAP": "地図",
+    "TAB_EVIDENCE": "証拠",
+    "TAB_CRIME": "犯罪",
+    "TAB_VIDEO": "ビデオ",
+    "TAB_INSIGHTS": "洞察",
+    "USER_ICON_TOOLTIP" : "ユーザー",
+    "ALARM_ICON_TOOLTIP" : "アラーム情報",
+    "SEARCH_ICON_TOOLTIP" : "探索",
+    "LIST_ICON_TOOLTIP": "リスト"
+}

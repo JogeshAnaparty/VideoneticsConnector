@@ -1,0 +1,24 @@
+{
+	"USERS_SIDEBAR": "USERS",
+	"DEPARTMENTS_SIDEBAR": "DEPARTMENTS",
+	"DETAIL_BUTTON": "DETAILS",
+	"DELETE_BUTTON": "DELETE",
+	
+	"USERS" : 
+	{
+		"FIRST_LABEL": "ID",
+		"SECOND_LABEL":"NAME",
+		"THIRD_LABEL": "EMAIL",
+		"SEARCH_BAR_ADD_NEW":"Add new User",
+		"SEARCH_BAR_TITLE":"Users"
+	},
+	"DEPARTMENTS" : 
+	{
+		"FIRST_LABEL": "ID",
+		"SECOND_LABEL":"NAME",
+		"THIRD_LABEL":"PERSONAL",
+		"SEARCH_BAR_ADD_NEW":"Add new Department",
+		"SEARCH_BAR_TITLE":"Departments"
+	}
+	
+}

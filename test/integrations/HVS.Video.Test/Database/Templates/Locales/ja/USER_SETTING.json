@@ -1,0 +1,58 @@
+{
+    "SAVE_LABEL": "セーブ",
+    "RESET_LABEL": "リセット",
+    "LOCALES":{
+	    "LANGUAGE": 
+	    {
+	    	"LABEL" : "言語",
+	    	"OPTIONS" : 
+	    	{
+			    "ENGLISH" : "英語",
+				"ITALIANO" : "イタリア語",
+				"JAPANESE" : "日本語"
+	    	}
+	    },
+		"DISTANCE":
+		{
+			"LABEL" : "距離",
+			"OPTIONS" : 
+			{
+                "METERS" : "メートル",
+				"KILOMETERS" : "キロメートル",
+				"MILES" : "マイル",
+                "NAUTICAL_MILES" : "海洋航路"
+			}
+		},
+		"SPEED" :
+		{
+			"LABEL" : "速度",
+			"OPTIONS" : 
+			{
+				"METERS_PER_SECOND" : "1秒あたりのメーター",
+				"KILOMETERS_PER_HOUR" : "1時間あたりのキロメートル",
+				"MILES_PER_HOUR" : "1時間あたりのマイル数",
+                "KNOTS" : "結び目"
+			}
+		},
+		"TEMPERATURE" :
+		{
+			"LABEL" : "温度",
+			"OPTIONS" : 
+			{
+				"KELVIN" : "ケルビン",
+				"CELSIUS" : "摂氏",
+				"FAHRENHEIT" : "華氏"	
+			}
+		},
+		"CURRENCY" :
+		{
+			"LABEL" : "通貨",
+			"OPTIONS" : 
+			{
+				"DOLLARS" : "ドル",
+				"EURO" : "ユーロ",
+				"YEN" : "日本円"
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+{
+  "ok_response": [
+    {
+      "channel_id": 0,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/03.mp4/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "channel_id": 1,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/03.mp4/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "channel_id": 2,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/enc_mp4_london_england_palace_of_westminster_building_street.mp4/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "channel_id": 3,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/03.mp4/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "channel_id": 4,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/03.mp4/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "channel_id": 5,
+      "status": 2007,
+      "code": 200,
+      "description": "Successfully Applied!",
+      "uri": "http://127.0.0.1:5000/REST/local/startarchive/10/800/700/0",
+      "result": [
+        {
+          "sesssionId": 1497337939320,
+          "hlsURL": "http://localhost:1935/vod/03.mp4/playlist.m3u8"
+        }
+      ]
+    }
+  ],
+  "error_response": {
+    "status": 3110,
+    "code": 404,
+    "description": "Not Found",
+    "message": "There is no channel or invalid channle id!",
+    "uri": "http://{server-ip}:{port}/REST/local/startarchive/10/800/700/0",
+    "result": []
+  }
+}

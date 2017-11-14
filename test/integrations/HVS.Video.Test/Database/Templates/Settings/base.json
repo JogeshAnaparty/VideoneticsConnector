@@ -1,0 +1,100 @@
+﻿[
+	{
+		"_id": "language",
+		"i18_key": "LANGUAGE",
+		"options": [
+			{
+				"value": "en",
+				"i18_key": "ENGLISH"
+			},
+			{
+				"value": "it",
+				"i18_key": "ITALIANO"
+			},
+			{
+				"value": "ja",
+				"i18_key": "JAPANESE"
+			}
+		]
+	},
+	{
+		"_id": "currency",
+		"i18_key": "CURRENCY",
+		"options": [
+      {
+        "value": "DOLLARS",
+        "i18_key": "DOLLARS"
+      },
+			{
+				"value": "EURO",
+				"i18_key": "EURO"
+			},
+      {
+        "value": "YEN",
+        "i18_key": "YEN"
+      }
+		]
+	},
+	{
+		"_id": "temperatures",
+		"i18_key": "TEMPERATURE",
+		"options": [
+			{
+				"value": "KELVIN",
+				"i18_key": "KELVIN"
+			},
+			{
+				"value": "CELSIUS",
+				"i18_key": "CELSIUS"
+			},
+			{
+				"value": "FAHRENHEIT",
+				"i18_key": "FAHRENHEIT"
+			}
+		]
+	},
+	{
+		"_id": "speeds",
+		"i18_key": "SPEED",
+		"options": [
+			{
+				"value": "METERS_PER_SECOND",
+				"i18_key": "METERS_PER_SECOND"
+			},
+			{
+				"value": "KILOMETERS_PER_HOUR",
+				"i18_key": "KILOMETERS_PER_HOUR"
+			},
+			{
+				"value": "MILES_PER_HOUR",
+				"i18_key": "MILES_PER_HOUR"
+			},
+			{
+				"value": "KNOTS",
+				"i18_key": "KNOTS"
+			}
+		]
+	},
+	{
+		"_id": "distances",
+		"i18_key": "DISTANCE",
+		"options": [
+			{
+				"value": "METERS",
+				"i18_key": "METERS"
+			},
+			{
+				"value": "KILOMETERS",
+				"i18_key": "KILOMETERS"
+			},
+			{
+				"value": "MILES",
+				"i18_key": "MILES"
+			},
+			{
+				"value": "NAUTICAL_MILES",
+				"i18_key": "NAUTICAL_MILES"
+			}
+		]
+	}
+]

@@ -1,0 +1,21 @@
+{
+  "ok_response": {
+    "status": 2007,
+    "code": 200,
+    "description": "Successfully Applied!",
+    "uri": "http://{server-ip}:{port}/version",
+    "result": [
+      {
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "error_response": {
+    "status": 3110,
+    "code": 404,
+    "description": "Not Found",
+    "message": "There is no channel or invalid channle id!",
+    "uri": "http://{server-ip}:{port}/version",
+    "result": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok_response": {
+    "status": 2007,
+    "code": 200,
+    "description": "Successfully Applied!",
+    "uri": "http://{server-ip}:{port}/V-Pro-IVMS-APIServer/local/stoplive",
+    "result": [
+      {
+        "sesssionId": 1497337939320
+
+      }
+    ]
+  },
+  "error_response": {
+    "status": 1504,
+    "code": 500,
+    "description": "Internal? ?Server? ?Error",
+    "message": "Cannot? ?connect? ?the? ?site? ?VMS server.",
+    "uri": "? ?http://{server-ip}:{port}/V-Pro-IVMS-APIServer/local/stoplive",
+    "result": []
+  }
+  }

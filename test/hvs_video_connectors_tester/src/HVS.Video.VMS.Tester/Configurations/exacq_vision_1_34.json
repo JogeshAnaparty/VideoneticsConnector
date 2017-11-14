@@ -1,0 +1,19 @@
+﻿{
+  "Active": true,
+  "Attributes": {},
+  "BrandId": "exacq_vision_1_34",
+  "description": "Exacq Vision 1.34 @ public Exacq lab",
+  "domain_id": "595e2ced1b4b1b55701ee10d",
+  "Enabled": true,
+  //"IPAddress": "evapi.exacq.com",
+  "IPAddress": "192.168.1.115",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "Exacq Test",
+  //"Password": "evapi3141",
+  "Password": "Hitachi01!",
+  "Port": 22609,
+  "site_id": "5555",
+  //"Username": "evapi"
+  "Username": "admin"
+}

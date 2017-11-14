@@ -1,0 +1,30 @@
+{
+	"LOADING_MSG" : "...Caricamento in corso",
+	"OBJECTS" : 
+	{
+		"LABEL" : "OGGETTI",
+	    "SUB_MENUS" :
+		{
+			"Camera": "macchina fotografica",
+			"Gateway": "ingresso",
+			"VMS": "VMS",
+			"Evidence": "Prova",
+			"Asset": "Bene",
+			"Case": "Caso"
+		}
+	},
+	"SYSTEM" : 
+	{
+		"LABEL" : "SISTEMA",
+		"SUB_MENUS" : 
+		{
+			"DEPARTMENTS": "DIPARTIMENTI",
+			"DOMAIN_DETAILS": "DOMINIO DETTAGLI",
+			"ENTITY_TYPES": "tipi di entità",
+			"GATEWAYS": "GATEWAY",
+			"IMPERSONATE": "IMPERSONARE",
+			"MAPS": "MAPPE",
+			"USERS": "UTENTI"
+		}
+	}
+}

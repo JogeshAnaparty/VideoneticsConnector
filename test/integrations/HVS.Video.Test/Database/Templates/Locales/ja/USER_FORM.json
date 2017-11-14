@@ -1,0 +1,10 @@
+{
+    "FIRST_NAME_LABEL": "ファーストネーム",
+    "LAST_NAME_LABEL": "苗字",
+    "EMAIL_LABEL": "Eメール",
+    "OLD_PW_LABEL": "以前のパスワード",
+    "NEW_PW_LABEL": "新しいパスワード",
+    "RETYPE_PW_LABEL" : "新しいパスワード再入力",
+    "SAVE_LABEL" : "セーブ",
+    "RESET_LABEL" : "リセット"
+}

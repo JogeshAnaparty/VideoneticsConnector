@@ -1,0 +1,511 @@
+﻿[
+  {
+    "entity_type_templates": [
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          },
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "my icon",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "MAPS_AND_LAYERS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          }
+        },
+        "attributes": {
+          "url": {
+            "label": "URL"
+          }
+        },
+        "childable_types": null,
+        "create_one_on_module_added": true,
+        "description": "The map entity type",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "name": "Map",
+        "operations": [],
+        "persistence_on_map": 5,
+        "refresh_intervals": 5,
+        "system_type": "map",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          },
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "my icon",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "MAPS_AND_LAYERS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          }
+        },
+        "attributes": {
+          "url": {
+            "label": "URL"
+          },
+          "type": {
+            "label": "Type"
+          },
+          "attachment_id": {
+            "label": "Attachment Id"
+          },
+          "default_fields": {
+            "label": "Default Fields"
+          }
+        },
+        "childable_types": null,
+        "create_one_on_module_added": true,
+        "description": "The layer entity type",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "name": "Layer",
+        "operations": [],
+        "persistence_on_map": 5,
+        "refresh_intervals": 5,
+        "system_type": "layer",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          },
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "my icon",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "HIDDEN",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          }
+        },
+        "attributes": null,
+        "childable_types": {
+          "same_as_parent": true
+        },
+        "description": "A entity type area",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "area",
+        "operations": [
+        ],
+        "persistence_on_map": 5,
+        "refresh_intervals": 5,
+        "system_type": "area",
+        "is_public": false,
+        "visible": true
+      },
+      {
+        "appearance": {
+          "domain_panel_location": "HIDDEN"
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "Videowall",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "Videowall",
+        "operations": [
+        ],
+        "persistence_on_map": 5,
+        "refresh_intervals": 5,
+        "system_type": "videowall",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          },
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "camera",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "OBJECTS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "",
+            "shape": ""
+          }
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "A entity type camera with related system type",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "Camera",
+        "operations": [
+          "play_live",
+          "playback_operation",
+          "export",
+          "move_ptz",
+          "move_preset",
+          "move_tour"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "system_type": "camera",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "OBJECTS"
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "A component of a security system that collects and records video from cameras and other sources and provides an interface to both view the live video, and access recorded video",
+        "display_name": "VMS",
+        "enabled": true,
+        "entity_creation_notification": {
+          "enabled": true,
+          "message_format": ""
+        },
+        "create_one_on_module_added": true,
+        "name": "VMS",
+        "operations": [],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "system_type": "vms",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "color": "",
+          "icon": "",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "OBJECTS"
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "A entity type gateway with related system type",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "has_area": false,
+        "create_one_on_module_added": true,
+        "has_tracking": false,
+        "name": "Gateway",
+        "operations": [
+          "read_stats",
+          "reboot"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "system_type": "gateway",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "OBJECTS"
+        },
+        "attributes": null,
+        "childable_types": {
+          "allowed_types": [
+            "camera"
+          ]
+        },
+        "description": "Description of the bus",
+        "display_name": "Bus",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "has_area": true,
+        "has_tracking": true,
+        "create_one_on_module_added": false,
+        "name": "Bus",
+        "operations": [],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "visible": true,
+        "is_public": true
+      },
+      {
+
+        "appearance": {
+          "background_color": "#c90a0a",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "bomb",
+            "shape": ""
+          },
+          "color": "#c90a0a",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "bomb",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "EVENTS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "bomb",
+            "shape": ""
+          }
+        },
+        "attributes": null,
+        "description": "Description of the gunshot",
+        "display_name": "Gunshot",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "Gunshot",
+        "operations": [],
+        "persistence_on_map": 120,
+        "refresh_intervals": 5,
+        "visible": true,
+        "system_type": "gunshot",
+        "is_public": false
+      },
+      {
+
+        "appearance": {
+          "background_color": "#a53131",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "car",
+            "shape": ""
+          },
+          "color": "#a53131",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "car",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "EVENTS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "car",
+            "shape": ""
+          }
+        },
+        "attributes": null,
+        "description": "Description of the lpr",
+        "display_name": "LPR",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "LPR",
+        "operations": [],
+        "persistence_on_map": 120,
+        "refresh_intervals": 5,
+        "visible": true,
+        "system_type": "lpr",
+        "is_public": false
+      },
+      {
+
+        "appearance": {
+          "background_color": "#5379db",
+          "cluster_marker": {
+            "custom": "",
+            "icon": "exclamation-circle",
+            "shape": ""
+          },
+          "color": "#5379db",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "exclamation-circle",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "EVENTS",
+          "nearby_entities_distance": 20,
+          "single_marker": {
+            "custom": "",
+            "icon": "exclamation-circle",
+            "shape": ""
+          }
+        },
+        "attributes": null,
+        "description": "Description of the CAD",
+        "display_name": "CAD",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "CAD",
+        "operations": [],
+        "persistence_on_map": 120,
+        "refresh_intervals": 5,
+        "visible": true,
+        "system_type": "cad",
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "OBJECTS"
+        },
+        "attributes": null,
+        "childable_types": {
+          "allowed_types": [
+            "camera"
+          ]
+        },
+        "description": "Description of the ferry",
+        "display_name": "Ferry",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "has_area": true,
+        "has_tracking": true,
+        "create_one_on_module_added": false,
+        "name": "Ferry",
+        "operations": [],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "visible": true,
+        "is_public": true
+      },
+      {
+        "appearance": {
+          "color": "#2c3e50",
+          "icon": "",
+          "showInDetailsView": true,
+          "showInMapPopup": true,
+          "visible": true,
+          "domain_panel_location": "OBJECTS"
+        },
+        "attributes": null,
+        "childable_types": {
+          "allowed_types": [
+            "camera"
+          ]
+        },
+        "description": "Description of the building",
+        "display_name": "Building",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "has_area": true,
+        "create_one_on_module_added": false,
+        "name": "Building",
+        "operations": [],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "visible": true,
+        "is_public": true
+      },
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "crime",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "CRIMES",
+          "nearby_entities_distance": 20
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "Breaking and entering, or entering without breaking, any dwelling, bank, store, warehouse, shop, stable, or other building or any apartment or room, whether at the time occupied or not, or any steamboat, canal boat, vessel, other watercraft, railroad car, or any yard where any lumber, coal, or other goods or chattels are deposited and kept for the purpose of trade, with intent to break and carry away any part thereof or any fixture or other thing attached to or connected with the same.",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "theft",
+        "display_name": "Other theft",
+        "operations": [
+          "enable",
+          "insertupdate",
+          "read",
+          "delete"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "system_type": "theft",
+        "visible": true,
+        "is_public": false
+      },
+      {
+        "appearance": {
+          "background_color": "#2C3E50",
+          "color": "#3498DB",
+          "has_detail_page": true,
+          "has_preview_panel": true,
+          "icon": "crime",
+          "max_markers_on_map": 500,
+          "domain_panel_location": "CRIMES",
+          "nearby_entities_distance": 20
+        },
+        "attributes": null,
+        "childable_types": null,
+        "description": "Breaking and entering, or entering without breaking, any dwelling, bank, store, warehouse, shop, stable, or other building or any apartment or room, whether at the time occupied or not, or any steamboat, canal boat, vessel, other watercraft, railroad car, or any yard where any lumber, coal, or other goods or chattels are deposited and kept for the purpose of trade, with intent to break and carry away any part thereof or any fixture or other thing attached to or connected with the same.",
+        "enabled": true,
+        "entity_creation_notification": null,
+        "create_one_on_module_added": true,
+        "name": "assault",
+        "display_name": "Assault with Dangerous Weapon",
+        "operations": [
+          "enable",
+          "insertupdate",
+          "read",
+          "delete"
+        ],
+        "persistence_on_map": null,
+        "refresh_intervals": 5,
+        "system_type": "assault",
+        "visible": true,
+        "is_public": false
+      }
+    ],
+    "friendly_name": "Maps & Layers",
+    "i18n_key": "map",
+    "id": "map",
+    "operations": [
+      "map_view",
+      "search",
+      "timeline"
+    ]
+  }
+]

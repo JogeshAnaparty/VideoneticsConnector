@@ -1,0 +1,16 @@
+﻿{
+  "Active": true,
+  "Attributes": {},
+  "BrandId": "orchid",
+  "description": "Orchid Vms @ local lab",
+  "domain_id": "596f28721b4b1b4f389f25d7",
+  "Enabled": true,
+  "IPAddress": "localhost",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "Orchid Test",
+  "Password": "admin",
+  "Port": 80,
+  "site_id": "5555",
+  "Username": "admin"
+}

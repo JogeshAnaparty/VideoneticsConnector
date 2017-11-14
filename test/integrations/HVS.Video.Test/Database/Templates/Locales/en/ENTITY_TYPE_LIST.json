@@ -1,0 +1,13 @@
+{
+    "ENTITY_TYPE_MGMT_TITLE" : "Entity Type Management",
+    "ENTITY_TYPE_ADD_NEW" : "Add New",
+    "ENTITY_TYPE_LIST_OPEN" : "Open",
+    "ENTITY_TYPE_LIST_DELETE" : "Delete",
+    "ENTITY_TYPE_LIST_NAME" : "Name",
+    "ENTITY_TYPE_LIST_DESC" : "Description",
+    "ENTITY_TYPE_LIST_NO_DATA_FOUND" : "No entity found",
+	"ENTITY_DETAIL_TITLE" : "Entity",
+	"SEARCH_PLACE_HOLDER" : "Srarch...",
+	"ENTITY_TYPE_TEMPLATES_LOADING" : "Loading templates....",
+	"SEARCH_BAR_ADD_NEW":"Add New Entity"
+}

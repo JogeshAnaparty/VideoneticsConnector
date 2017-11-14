@@ -1,0 +1,183 @@
+﻿[
+	{
+		"_id": "vms_connectors",
+		"options": [
+			{
+				"key": "genetec_securitycenter_5_1",
+				"name": "Genetec Security Center 5.1",
+				"enabled": false,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "genetec_securitycenter_5_2",
+				"name": "Genetec Security Center 5.2",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "genetec_securitycenter_5_3",
+				"name": "Genetec Security Center 5.3",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "kastle",
+				"name": "Kastle",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "milestone_xprotect_4_5",
+				"name": "Milestone XProtect 2013 R2",
+				"enabled": false,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "milestone_xprotect_2014",
+				"name": "Milestone XProtect 2014",
+				"enabled": false,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "milestone_xprotect_10_0",
+				"name": "Milestone XProtect 2016 R2",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "onssi_ocularis_4_1",
+				"name": "OnSSI Ocularis 4.1",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "onssi_ocularis_5_3",
+				"name": "OnSSI Ocularis 5.3",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": true,
+				"has_export": false
+			},
+			{
+				"key": "pelco_digitalsentry_7_12",
+				"name": "Pelco Digital Sentry 7.12",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "pelco_digitalsentry_7_7",
+				"name": "Pelco Digital Sentry 7.7",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "utcfs_interlogix_hal_6_0",
+				"name": "UTC FS Interlogix HAL 6.0",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "verint_nextiva_6_4",
+				"name": "Verint Nextiva 6.4",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": true
+			},
+			{
+				"key": "verint_nextiva_6_3",
+				"name": "Verint Nextiva 6.3",
+				"enabled": false,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": true
+			},
+			{
+				"key": "indigovision_13_2",
+				"name": "Indigo Vision Control Center 13.2",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "viconnet_8_0_32",
+				"name": "Vicon ViconNet 8.0.32",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "flir_latitude_7_0",
+				"name": "FLIR Latitude 7.0",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": false,
+				"has_export": true
+			},
+			{
+				"key": "orchid",
+				"name": "IPConfigure Orchid",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": false,
+				"has_export": false
+			},
+			{
+				"key": "geutebruck_2_0_1_32",
+				"name": "Geutebruck G-Core 2.0.1.32",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "videoinsight_1_0_9_0",
+				"name": "Video Insight 1.0.9.0",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": true
+			},
+			{
+				"key": "sensity_netsense_2_3_3",
+				"name": "Sensity NetSense 2.3.3",
+				"enabled": true,
+				"has_ptz": false,
+				"has_playback": false,
+				"has_export": true
+			},
+			{
+				"key": "sony_realshotmanager_5_6_8_2",
+				"name": "Sony RealShot Manager 5.6.8.2",
+				"enabled": true,
+				"has_ptz": true,
+				"has_playback": true,
+				"has_export": false
+			}
+		]
+	}
+]

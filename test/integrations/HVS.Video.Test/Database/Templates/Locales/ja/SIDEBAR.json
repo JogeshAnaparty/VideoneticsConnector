@@ -1,0 +1,30 @@
+{
+	"LOADING_MSG" : "...読み込み中",
+	"OBJECTS" : 
+	{
+		"LABEL" : "物体",
+	    "SUB_MENUS" :
+		{
+			"Camera": "カメラ",
+			"Gateway": "ゲートウェイ",
+			"VMS": "VMS",
+			"Evidence": "証拠",
+			"Asset": "資産",
+			"Case": "場合"
+		}
+	},
+	"SYSTEM" : 
+	{
+		"LABEL" : "システム",
+		"SUB_MENUS" : 
+		{
+			"DEPARTMENTS": "部署",
+			"DOMAIN_DETAILS": "ドメインの詳細",
+			"ENTITY_TYPES": "エンティティタイプ",
+			"GATEWAYS": "ゲートウェイ",
+			"IMPERSONATE": "倣",
+			"MAPS": "地図",
+			"USERS": "ユーザー"
+		}
+	}
+}

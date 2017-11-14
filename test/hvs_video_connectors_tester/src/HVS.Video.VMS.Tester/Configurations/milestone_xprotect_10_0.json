@@ -1,0 +1,20 @@
+﻿{
+    "Active": true,
+    "Attributes": {
+        "vendor_authentication": {
+            "value": "basic"
+        }
+    },
+    "BrandId": "milestone_xprotect_10_0",
+    "description": "Milestone XProtect Essential @ local lab",
+    "domain_id": "1040",
+    "Enabled": true,
+    "IPAddress": "2.235.204.23",
+    "IsPingSupported": false,
+    "IsVirtual": false,
+    "name": "Milestone Test",
+    "Password": "hvs",
+    "Port": 81,
+    "site_id": "5555",
+    "Username": "hvs"
+}

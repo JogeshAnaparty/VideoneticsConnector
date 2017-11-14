@@ -1,0 +1,16 @@
+﻿{
+  "Active": true,
+  "Attributes": {},
+  "BrandId": "sony_rsm_1_6",
+  "description": "Sony RSM 1.6 @ local lab",
+  "domain_id": "596f28721b4b1b4f389f25d7",
+  "Enabled": true,
+  "IPAddress": "192.168.1.115",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "Sony Test",
+  "Password": "admin",
+  "Port": 8081,
+  "site_id": "5555",
+  "Username": "admin"
+}

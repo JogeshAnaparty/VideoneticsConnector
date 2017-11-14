@@ -1,0 +1,10 @@
+Please find the V-Simulator dumps for faking cameras to HVS and its steps.
+
+1.open cmd
+2.python
+3.go to the folder of the Simulator in cmd
+4.E:\V-ConnectSimulator>python -m venv venv // This will add a venv folder in the directory
+5.Go to Scripts folder and check dir: E:\V-ConnectSimulator\venv\Scripts>dir
+6. E:\V-ConnectSimulator\venv\Scripts>activate.bat
+7.(venv) E:\V-ConnectSimulator>pip install -r requirements.txt // This installs all the packages required from requirements.txt
+8.(venv) E:\V-ConnectSimulator>python app.py

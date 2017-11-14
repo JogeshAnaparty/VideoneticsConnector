@@ -1,0 +1,20 @@
+﻿{
+  "Active": true,
+  "Attributes": {
+    "vendor_onssi_authentication": {
+      "value": "basic"
+    }
+  },
+  "BrandId": "onssi_ocularis_5_2",
+  "description": "OnSSI Ocularis 5.2 @ local lab",
+  "domain_id": "596f28721b4b1b4f389f25d7",
+  "Enabled": true,
+  "IPAddress": "192.168.1.117",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "OnSSI Test",
+  "Password": "admin",
+  "Port": 80,
+  "site_id": "5555",
+  "Username": "admin"
+}

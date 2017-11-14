@@ -1,0 +1,58 @@
+{
+    "SAVE_LABEL": "Save",
+    "RESET_LABEL": "Reset",
+    "LOCALES":{
+	    "LANGUAGE": 
+	    {
+	    	"LABEL" : "Language",
+	    	"OPTIONS" : 
+	    	{
+			    "ENGLISH" : "English",
+				"ITALIANO" : "Italiano",
+				"JAPANESE" : "Japanese"
+	    	}
+	    },
+		"DISTANCE":
+		{
+			"LABEL" : "Distance",
+			"OPTIONS" : 
+			{
+                "METERS" : "Meters",
+				"KILOMETERS" : "Kilometers",
+				"MILES" : "Miles",
+                "NAUTICAL_MILES" : "Nautical Miles"
+			}
+		},
+		"SPEED" :
+		{
+			"LABEL" : "Speed",
+			"OPTIONS" : 
+			{
+				"METERS_PER_SECOND" : "Meter per Second",
+				"KILOMETERS_PER_HOUR" : "Kilometers per hour",
+				"MILES_PER_HOUR" : "Miles per hour",
+                "KNOTS" : "Knots"
+			}
+		},
+		"TEMPERATURE" :
+		{
+			"LABEL" : "Temperature",
+			"OPTIONS" : 
+			{
+				"KELVIN" : "Kelvin",
+				"CELSIUS" : "Celsius",
+				"FAHRENHEIT" : "Fahrenheit"	
+			}
+		},
+		"CURRENCY" :
+		{
+			"LABEL" : "Currency",
+			"OPTIONS" : 
+			{
+				"DOLLARS" : "Dollar",
+				"EURO" : "Euro",
+				"YEN" : "Japanese Yen"
+			}
+		}
+	}
+}

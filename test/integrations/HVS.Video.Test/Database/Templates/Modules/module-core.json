@@ -1,0 +1,12 @@
+﻿[
+  {
+    "friendly_name": "Core",
+    "i18n_key": "core",
+    "id": "core",
+    "operations": [
+      "domains_admin",
+      "usergroups_admin",
+      "entitytypes_admin"
+    ]
+  }
+]

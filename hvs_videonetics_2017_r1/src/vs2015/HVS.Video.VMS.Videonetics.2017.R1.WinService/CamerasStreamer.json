@@ -1,0 +1,109 @@
+{
+  "domainId": "59f33d017a8c030cd8cfb4a8",
+  "siteId": "rtgsc_site01",
+  "vmsClusterManager": {
+    "id": "vc_rtgsc_videonetics_01",
+    "deviceId": "gw-rtgsc-01",
+    "domainId": "{domainId}",
+    "siteId": "{siteId}",
+    "brandId": "videonetics_2017",
+
+    "description": "Videonetics 2017 R1 1.0.0.0",
+    "vmsPollingInterval": 600000, //ms
+    "serviceBus": {
+      "host": "hvsproxy", //Localhost
+      "port": 5672,
+      "username": "hvsuser",
+      "password": "hvsuser",
+      "useSSL": false,
+      "certPath": "hitachivisualization.com.crt", // Staging
+      "certPassword": ""
+    },
+    "consumers": [
+      {
+        "exchange": {
+          "type": 1,
+          "name": "hvs.automation.domainid:{domainId}",
+          "durable": true,
+          "autoDelete": false,
+          "arguments": null
+        },
+        "queue": {
+          "exclusive": false,
+          "name": "daemonid:{vmsClusterManager.id}",
+          "durable": false,
+          "autoDelete": true,
+          "arguments": null
+        },
+        "routingKey": "siteid:{siteId}.brandid:{vmsClusterManager.brandId}"
+      },
+      {
+        "exchange": {
+          "type": 0,
+          "name": "hvs.automation",
+          "durable": true,
+          "autoDelete": false,
+          "arguments": null
+        },
+        "queue": {
+          "exclusive": false,
+          "name": "siteid:{siteId}.brandid:{vmsClusterManager.brandId}",
+          "durable": false,
+          "autoDelete": true,
+          "arguments": null
+        },
+        "routingKey": "siteid:{siteId}.brandid:{vmsClusterManager.brandId}"
+      },
+      {
+        "exchange": {
+          "type": 0,
+          "name": "hvs.automation",
+          "durable": true,
+          "autoDelete": false,
+          "arguments": null
+        },
+        "queue": {
+          "exclusive": false,
+          "name": "daemonid:{vmsClusterManager.id}",
+          "durable": false,
+          "autoDelete": true,
+          "arguments": null
+        },
+        "routingKey": "daemonid:{vmsClusterManager.id}"
+      }
+    ],
+    "publishers": [
+      {
+        "id": "WorkflowEngine",
+        "exchange": {
+          "type": "direct",
+          "name": "hvs.automation.workers",
+          "durable": true,
+          "autoDelete": false,
+          "arguments": null
+        },
+        "queue": {
+          "exclusive": false,
+          "name": "hvs.workers.workflow_engine",
+          "durable": false,
+          "auto_delete": false,
+          "arguments": null
+        },
+        "routingKey": "hvs.workers.workflow_engine",
+        "arguments": {
+          "reply-To": "",
+          "expiration": "1000"
+        }
+      }
+    ],
+    "maxParallelStreamsCount": 10,
+    "cpuUsageThreshold": -80, // %
+    "metricsUpdateInterval": 10000, //ms
+    "isTranscoderProcessMonitorEnabled": false,
+
+    // To work in RTSP: IsExternalStreamEnabled=false and TranscoderInputFormat=Rtsp (domain settings -> Flash Enabled)
+    // To work in HLS: IsExternalStreamEnabled=true and TranscoderInputFormat commented (domain settings -> Flash Disabled)
+    "IsExternalStreamEnabled": true
+    //"TranscoderInputFormat": "Rtsp" //Enable this attribute if for Live we want to stream directly fromt the camera
+  }
+}

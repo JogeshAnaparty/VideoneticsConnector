@@ -1,0 +1,11 @@
+{
+    "TAB_MAP": "Map",
+    "TAB_EVIDENCE": "Evidence",
+    "TAB_CRIME": "Crime",
+    "TAB_VIDEO": "Video",
+    "TAB_INSIGHTS": "Insights",
+    "USER_ICON_TOOLTIP" : "User",
+    "ALARM_ICON_TOOLTIP" : "Alarm Info",
+    "SEARCH_ICON_TOOLTIP" : "Search",
+    "LIST_ICON_TOOLTIP": "List"
+}

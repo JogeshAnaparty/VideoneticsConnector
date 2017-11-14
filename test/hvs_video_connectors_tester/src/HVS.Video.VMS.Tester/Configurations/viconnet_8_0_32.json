@@ -1,0 +1,16 @@
+﻿{
+  "Active": true,
+  "Attributes": {},
+  "BrandId": "viconnet_8_0_32",
+  "description": "Vicon Net 8.0 @ local lab",
+  "domain_id": "595e2ced1b4b1b55701ee10d",
+  "Enabled": true,
+  "IPAddress": "172.17.99.251",
+  "IsPingSupported": false,
+  "IsVirtual": false,
+  "name": "Vicon Test",
+  "Password": "admin",
+  "Port": 80,
+  "site_id": "5555",
+  "Username": "admin"
+}

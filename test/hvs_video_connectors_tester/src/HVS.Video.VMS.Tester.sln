@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HVS.Video.VMS.Tester", "HVS.Video.VMS.Tester\HVS.Video.VMS.Tester.csproj", "{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_x64|Any CPU = Debug_x64|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_x64|Any CPU = Release_x64|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Debug_x64|Any CPU.ActiveCfg = Debug_x64|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Debug_x64|Any CPU.Build.0 = Debug_x64|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Release_x64|Any CPU.ActiveCfg = Release_x64|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Release_x64|Any CPU.Build.0 = Release_x64|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A3A19B-342C-4FA6-9C9D-018FE45730CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

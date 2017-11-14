@@ -1,0 +1,10 @@
+{
+    "FIRST_NAME_LABEL": "First Name",
+    "LAST_NAME_LABEL": "Last Name",
+    "EMAIL_LABEL": "Email",
+    "OLD_PW_LABEL": "Old Password",
+    "NEW_PW_LABEL": "New Password",
+    "RETYPE_PW_LABEL" : "Retype New Password",
+    "SAVE_LABEL" : "Save",
+    "RESET_LABEL" : "Reset"
+}

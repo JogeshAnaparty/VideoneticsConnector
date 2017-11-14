@@ -1,0 +1,41 @@
+﻿{
+  "Connectors": [
+    {
+      "Text": "Exacq Vision 1.34",
+      "Value": "exacq_vision_1_34",
+      "TranscoderInputFormat": "Jpg" // Jpg, Rtsp
+    },
+    {
+      "Text": "Genetec Security Center 5.5",
+      "Value": "genetec_securitycenter_5_5",
+      "TranscoderInputFormat": "Jpg" // Jpg, Rtsp
+    },
+    {
+      "Text": "Geutebruck GCore 2.0",
+      "Value": "geutebruck_2_0_1_32",
+      "TranscoderInputFormat": "Jpg" // Jpg, Rtsp
+    },
+    {
+      "Text": "Milestone XProtect 2016 R2",
+      "Value": "milestone_xprotect_10_0",
+      "TranscoderInputFormat": "Jpg" // Jpg, Rtsp
+    },
+    {
+      "Text": "OnSSI Ocularis 5.2",
+      "Value": "onssi_ocularis_5_2",
+      "TranscoderInputFormat": "Jpg" // Jpg, Rtsp
+    },
+    {
+      "Text": "Orchid IPConfigure",
+      "Value": "orchid"
+    },
+    {
+      "Text": "Sony RSM 1.6",
+      "Value": "sony_rsm_1_6"
+    },
+    {
+      "Text": "Vicon Net 8.0",
+      "Value": "viconnet_8_0_32"
+    }
+  ]
+}

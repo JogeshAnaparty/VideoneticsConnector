@@ -1,0 +1,22 @@
+{
+  "ok_response": {
+    "status": 2007,
+    "code": 200,
+    "description": "Successfully Applied!",
+    "uri": "http://127.0.0.1:5000/REST/local/keepalive/sessionId",
+    "result": [
+      {
+        "sesssionId": 1497337939320,
+        "hlsURL": "http:// <server-ip>:<port>/live/TS_FILES/Live/VMS00000000000000000001CC084FD23/10/MajorStream/Without_Audio/80 0_700/index.m3u8"
+      }
+    ]
+  },
+  "error_response": {
+    "status": 3110,
+    "code": 404,
+    "description": "Not Found",
+    "message": "There is no channel or invalid channle id!",
+    "uri": "http://{server-ip}:{port}/REST/local/startlive/10/800/700/0",
+    "result": []
+  }
+}

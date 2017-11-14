@@ -1,0 +1,28 @@
+{
+	"DOMAIN_TITLE" : "ドメイン",
+	"SAVE_BUTTON" : "セーブ",
+	"NAME_LABEL" : "名前",
+	"DNS_LABEL" : "Dns",
+	"USER_NAME_LABEL" : "ユーザー名",
+	"EMAIL_LABEL" : "Eメール",
+	"TIME_ZONE_LABEL" : "タイムゾーン",
+	"TIME_ZONE_PLACE_HOLDER" : "タイムゾーンを選択...",
+	"DOMAIN_ID_LABEL" : "ドメインID",
+	"ENABLED_LABEL" : "有効",
+	"LICENSE" :
+	{
+		"LICENSES_TITLE" : "免許",
+		"NEW_BUTTON" : "新しい",
+		"SAVE_BUTTON" : "セーブ",
+		"ID_LABEL" : "Id",
+		"EXPIRATION_LABEL" : "有効期限",
+		"EXPIRATION_PLACE_HOLDER" : "MM/DD/YYYY",
+		"EXPIRY_LABEL": "満了",
+		"NAME_LABEL" : "名前",
+		"MODULES" :
+		{
+			"MAP" : "地図とレイヤー",
+			"DEM" : "DEM"
+		}
+	}
+}
