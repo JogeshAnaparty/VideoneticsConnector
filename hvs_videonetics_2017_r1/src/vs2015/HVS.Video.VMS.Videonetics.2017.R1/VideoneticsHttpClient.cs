@@ -31,7 +31,7 @@
         protected const int DefaultCameraFps = 25;
         protected const int DefaultCameraVideoWidth = 1920;
         protected const int DefaultCameraVideoHeight = 1080;
-        protected const int DefaultCameraAudioEnabled = 0;
+        protected const int DefaultCameraAudioEnabled = 1;
         protected const int ResponseStatusCode = 200;
 
         #endregion
