@@ -123,7 +123,7 @@
             //var response = DoRequest(requestString);
             //var response = Task.Run(() => DoRequest(requestString)).Result;
             //string response = DoRequest(requestString).GetAwaiter().GetResult();
-            Task<string> response = Task.Run(async () =>
+            Task<string> liveResponse = Task.Run(async () =>
             {
                 string msg = await DoRequest(requestString).ConfigureAwait(false);
                 return msg;
@@ -131,8 +131,8 @@
 
             //TODO check the response back from the server in case of error
             // i.e. response.code
-
-            StartLiveResponse startliveResponse = JsonConvert.DeserializeObject<StartLiveResponse>(response.Result);
+            var response = liveResponse.Result;
+            StartLiveResponse startliveResponse = JsonConvert.DeserializeObject<StartLiveResponse>(response);
             var result = startliveResponse.result;
             if (result != null && startliveResponse.code == ResponseStatusCode)
             {
@@ -159,12 +159,14 @@
                 liveSessions[clientId].cancellationToken.Cancel(false);
                 //Stop live
                 //var response = DoRequest(string.Format(StopLiveRequestUri, liveSessions[clientId].sesssionId));
-                Task<string> response = Task.Run(async () =>
+                Task<string> stopResponse = Task.Run(async () =>
                 {
                     string msg = await DoRequest(string.Format(StopLiveRequestUri, liveSessions[clientId].sesssionId)).ConfigureAwait(false);
                     return msg;
                 });
-                KeepLive stoplive = JsonConvert.DeserializeObject<KeepLive>(response.Result);
+
+                var response = stopResponse.Result;
+                KeepLive stoplive = JsonConvert.DeserializeObject<KeepLive>(response);
                 //TODO check the response back from the server in case of error
                 // i.e. response.code
                 if(stoplive.code == ResponseStatusCode)
@@ -183,16 +185,16 @@
 												   uint videoHeight = DefaultCameraVideoHeight, uint enableAudio = DefaultCameraAudioEnabled)
         {
             //var response = DoRequest(string.Format(StartArchiveRequestUri, channelId, videoWidth, videoHeight, startTimeStamp, enableAudio));
-            Task<string> response = Task.Run(async () =>
+            Task<string> archiveResponse = Task.Run(async () =>
             {
                 string msg = await DoRequest(string.Format(StartArchiveRequestUri, channelId, videoWidth,
-                    videoHeight, startTimeStamp, enableAudio)).ConfigureAwait(false);
+                    videoHeight, startTimeStamp, enableAudio), DefaultRetryDelay).ConfigureAwait(false);
                 return msg;
             });
             //TODO check the response back from the server in case of error
             // i.e. response.code
-
-            StartArchiveVideoResponse startArchiveResponse = JsonConvert.DeserializeObject<StartArchiveVideoResponse>(response.Result);
+            var response = archiveResponse.Result;
+            StartArchiveVideoResponse startArchiveResponse = JsonConvert.DeserializeObject<StartArchiveVideoResponse>(response);
             var result = startArchiveResponse.result;
             if (result != null && startArchiveResponse.code == ResponseStatusCode)
             {
@@ -217,13 +219,15 @@
                 archiveSessions[clientId].cancellationToken.Cancel(false);
                 //Stop live
                 //var response = DoRequest(string.Format(StopArchiveRequestUri, archiveSessions[clientId].sesssionId));
-                Task<string> response = Task.Run(async () =>
+                Task<string> stopResponse = Task.Run(async () =>
                 {
                     string msg = await DoRequest(string.Format(StopArchiveRequestUri, 
                         archiveSessions[clientId].sesssionId)).ConfigureAwait(false);
                     return msg;
                 });
-                KeepLive stoparchive = JsonConvert.DeserializeObject<KeepLive>(response.Result);
+
+                var response = stopResponse.Result;
+                KeepLive stoparchive = JsonConvert.DeserializeObject<KeepLive>(response);
                 //TODO check the response back from the server in case of error
                 // i.e. response.code
 
@@ -257,11 +261,11 @@
         //    }
         //}
 
-        private async Task<string> DoRequest(string requestUri, bool post = false)
+        private async Task<string> DoRequest(string requestUri, uint timeout = RequestTimeout, bool post = false)
         {
 
             string result = string.Empty;
-            var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(RequestTimeout)); //RequestTimeout = 2000
+            var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(timeout)); //RequestTimeout = 5000
 
             try
             {
@@ -275,7 +279,7 @@
             }
             catch (Exception ex)
             {
-                Log.Error($"Request {httpClient.BaseAddress} ({requestUri}) Error: { ex.Message}");
+                Log.Error($"Exception:Request {httpClient.BaseAddress} ({requestUri}) Error: { ex.Message}");
                 result = "{ 'message': '" + ex.Message + "'}";
             }
 
