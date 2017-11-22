@@ -27,6 +27,7 @@
         public const int DefaultRetryDelay = 5000; //ms
         public const int DefaultKeepAliveTimeout = 30000; //ms
         public const int RequestTimeout = 2000; //ms
+        public const int ArchiveTimeout = 10000;
 
         protected const int DefaultCameraFps = 25;
         protected const int DefaultCameraVideoWidth = 1920;
@@ -188,7 +189,7 @@
             Task<string> archiveResponse = Task.Run(async () =>
             {
                 string msg = await DoRequest(string.Format(StartArchiveRequestUri, channelId, videoWidth,
-                    videoHeight, startTimeStamp, enableAudio), DefaultRetryDelay).ConfigureAwait(false);
+                    videoHeight, startTimeStamp, enableAudio), ArchiveTimeout).ConfigureAwait(false);
                 return msg;
             });
             //TODO check the response back from the server in case of error
