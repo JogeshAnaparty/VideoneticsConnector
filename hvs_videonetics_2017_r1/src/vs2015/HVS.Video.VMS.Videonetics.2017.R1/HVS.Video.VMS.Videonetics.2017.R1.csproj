@@ -208,6 +208,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VideoneticsCamera.cs" />
     <Compile Include="VideoneticsHttpClient.cs" />
+    <Compile Include="VideoneticsMoveCameraArgs.cs" />
     <Compile Include="VideoneticsVMSClient.cs" />
     <Compile Include="VideoneticsVMSClusterManager.cs" />
     <Compile Include="VideoneticsVMSManager.cs" />

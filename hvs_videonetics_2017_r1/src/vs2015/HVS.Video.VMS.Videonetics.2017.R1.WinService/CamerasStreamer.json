@@ -11,7 +11,7 @@
     "description": "Videonetics 2017 R1 1.0.0.0",
     "vmsPollingInterval": 600000, //ms
     "serviceBus": {
-      "host": "192.168.139.233", //Localhost hvsproxy
+      "host": "192.168.139.233", //Localhost
       "port": 5672,
       "username": "hvsuser",
       "password": "hvsuser",

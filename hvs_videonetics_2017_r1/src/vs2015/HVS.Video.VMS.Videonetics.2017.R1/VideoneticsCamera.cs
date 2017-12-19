@@ -39,7 +39,7 @@
             Longitude = camera.longitude;
 			Description = !string.IsNullOrEmpty(camera.ip) ?  $"Videonetics Camera [{SourceId} - {camera.ip}]" : $"Videonetics Camera [{SourceId}]";
 			// PTZ not supported yet?
-	        IsPtz = false;
+	        IsPtz = Convert.ToBoolean(camera.configurationType);
 	        RecordingEnabled = camera.recordingId > 0;
 
 			// Set additional attributes

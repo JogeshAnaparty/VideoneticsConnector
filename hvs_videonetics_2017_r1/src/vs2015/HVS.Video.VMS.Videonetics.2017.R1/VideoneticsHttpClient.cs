@@ -186,10 +186,10 @@
 												   uint videoHeight = DefaultCameraVideoHeight, uint enableAudio = DefaultCameraAudioEnabled)
         {
             //var response = DoRequest(string.Format(StartArchiveRequestUri, channelId, videoWidth, videoHeight, startTimeStamp, enableAudio));
+            var requestString = string.Format(StartArchiveRequestUri, channelId, videoWidth, videoHeight, startTimeStamp, enableAudio);
             Task<string> archiveResponse = Task.Run(async () =>
             {
-                string msg = await DoRequest(string.Format(StartArchiveRequestUri, channelId, videoWidth,
-                    videoHeight, startTimeStamp, enableAudio), ArchiveTimeout).ConfigureAwait(false);
+                string msg = await DoRequest(requestString, ArchiveTimeout).ConfigureAwait(false);
                 return msg;
             });
             //TODO check the response back from the server in case of error
@@ -208,7 +208,8 @@
                 return startArchiveResponse;
             }
 
-			Log.Error($"Request {httpClient.BaseAddress} ({StartArchiveRequestUri}) ");
+			//Log.Error($"Request {httpClient.BaseAddress} ({StartArchiveRequestUri}) ");
+            Log.Error($"Request {httpClient.BaseAddress} ({requestString}) Error: { startArchiveResponse.message}");
             throw new InvalidOperationException($"An error occurred starting live for Camera {channelId}:\r\nError:\r\n{startArchiveResponse.message}");
         }
 
@@ -244,6 +245,23 @@
             }
         }
 
+        /// <summary>
+		/// Moves the camera.
+		/// </summary>
+		/// <param name="contextId">The context identifier.</param>
+		/// <param name="commandId">The command identifier.</param>
+		/// <param name="speed">The speed.</param>
+		/// <returns></returns>
+		public void MoveCamera(string contextId, string commandId, string speed = "0")
+        {
+            //var response = httpClient.GetAsync(String.Format(PtzResource, contextId, commandId, speed, speed)).Result;
+            //response.EnsureSuccessStatusCode();
+            //var content = response.Content.ReadAsByteArrayAsync().Result;
+            //MemoryStream ms = new MemoryStream(content);
+            //XmlSerializer xs = new XmlSerializer(typeof(HeaderedResponse));
+            //return (HeaderedResponse)xs.Deserialize(ms);
+        }
+
         #endregion
 
         #region Helpers
@@ -266,7 +284,7 @@
         {
 
             string result = string.Empty;
-            var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(timeout)); //RequestTimeout = 5000
+            var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(timeout));
 
             try
             {
