@@ -1,8 +1,5 @@
 ﻿namespace HVS.Video.VMS.Videonetics._2017.R1
 {
-    //using System;
-    //using Protocol;
-    //using Data.Entities;
     using System;
     using Protocol.Video;
 
@@ -11,10 +8,10 @@
     /// </summary>
     public class VideoneticsMoveCameraArgs : MoveCameraArgs
     {
-        #region Consts
+        #region Constants
 
-        public const string PTZRIGHT = "14";
         public const string PTZLEFT = "13";
+        public const string PTZRIGHT = "14";
         public const string PTZUP = "15";
         public const string PTZDOWN = "16";
         public const string PTZIN = "21";
@@ -78,8 +75,6 @@
                     return PTZIN;
                 case PTZArgs.Action.ZoomOut:
                     return PTZOUT;
-                default:
-                    return null;
             }
 
             throw new InvalidOperationException();

@@ -23,6 +23,7 @@
         public const string StartArchiveRequestUri = "/REST/local/startarchive/{0}/{1}/{2}/{3}/{4}"; // channelId/widht/height/starttimestamp/audioEnabled
         public const string StopArchiveRequestUri = "/REST/local/stoparchive/{0}"; // sessionid
         public const string ArchiveVideoKeepArchiveAliveRequestUri = "/REST/local/archive/keepalive/{0}"; //sessionId;
+        public const string PTZRequestUri = "/REST/local/ptz/channel/{0}/{1}/{2}"; //channelId/Ptz-Action/speed param;
 
         public const int DefaultRetryDelay = 5000; //ms
         public const int DefaultKeepAliveTimeout = 30000; //ms
@@ -245,21 +246,21 @@
             }
         }
 
-        /// <summary>
-		/// Moves the camera.
-		/// </summary>
-		/// <param name="contextId">The context identifier.</param>
-		/// <param name="commandId">The command identifier.</param>
-		/// <param name="speed">The speed.</param>
-		/// <returns></returns>
-		public void MoveCamera(string contextId, string commandId, string speed = "0")
+		public void MoveCamera(string channelId, string commandId, string speed = "0")
         {
-            //var response = httpClient.GetAsync(String.Format(PtzResource, contextId, commandId, speed, speed)).Result;
-            //response.EnsureSuccessStatusCode();
-            //var content = response.Content.ReadAsByteArrayAsync().Result;
-            //MemoryStream ms = new MemoryStream(content);
-            //XmlSerializer xs = new XmlSerializer(typeof(HeaderedResponse));
-            //return (HeaderedResponse)xs.Deserialize(ms);
+            var requestString = string.Format(PTZRequestUri, channelId, commandId, speed);
+            Task<string> moveResponse = Task.Run(async () =>
+            {
+                string msg = await DoRequest(requestString).ConfigureAwait(false);
+                return msg;
+            });
+
+            var response = moveResponse.Result;
+            KeepLive moveCamera = JsonConvert.DeserializeObject<KeepLive>(response);
+            if (moveCamera.code != ResponseStatusCode)            
+            {
+                Log.Error($"Request {httpClient.BaseAddress} ({requestString}) Error: { moveCamera.message}");
+            }
         }
 
         #endregion
@@ -358,8 +359,6 @@
                     $"Number of Cameras of Archive Stream {archiveSessions.Count}");
 
             }, cancellationTokenSource.Token);
-
-
         }
 
         #endregion
