@@ -11,7 +11,6 @@
         #region Fields
 
         private VideoneticsHttpClient httpClient;
-        const string PTZ_SPEED = "5";
 
         #endregion
 
@@ -86,11 +85,16 @@
 		}
 
 
-		#endregion
+        #endregion
 
-	    #region Playback
+        #region Playback
 
-	    public override object CameraPlayback(CameraTaskArgs args)
+        /// <summary>
+        /// CameraPlayback
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public override object CameraPlayback(CameraTaskArgs args)
 	    {
 		    var cameraPlaybackArg = (CameraPlaybackArgs) args;
 		    switch (cameraPlaybackArg.PlaybackVerb)
@@ -116,6 +120,10 @@
 
         #region ExportClip
 
+        /// <summary>
+        /// ExportClip
+        /// </summary>
+        /// <param name="args"></param>
         public override void ExportClip(CameraTaskArgs args)
         {
             base.ExportClip(args);
@@ -127,6 +135,10 @@
 
         #region MoveCamera
 
+        /// <summary>
+        /// MoveCamera
+        /// </summary>
+        /// <param name="args"></param>
         public override void MoveCamera(CameraTaskArgs args)
         {            
             base.MoveCamera(args);
@@ -134,10 +146,7 @@
             {
                 // TODO
                 // PTZ Implementation 
-                VideoneticsMoveCameraArgs moveArgs = VideoneticsMoveCameraArgs.New((MoveCameraArgs)args);
-                //VideoneticsCamera camera = ((VideoneticsCamera)Cameras.FirstOrDefault(x => x.Id == moveArgs.Camera.Id));
-                //if (camera == null)
-                //    throw new InvalidOperationException($"Cannot find camera id {moveArgs.Camera.Id}");
+                VideoneticsMoveCameraArgs moveArgs = VideoneticsMoveCameraArgs.New((MoveCameraArgs)args);                
                 VideoneticsCamera camera = (VideoneticsCamera)Cameras.FirstOrDefault(x => x.SourceId == args.Camera.SourceId);
                 if (camera == null)
                     throw new InvalidOperationException($"Cannot find camera sourceId {args.Camera.SourceId}");
@@ -148,22 +157,22 @@
                     switch (moveArgs.PTZCommand)
                     {
                         case VideoneticsMoveCameraArgs.PTZUP:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZUP, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZUP, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                         case VideoneticsMoveCameraArgs.PTZDOWN:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZDOWN, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZDOWN, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                         case VideoneticsMoveCameraArgs.PTZLEFT:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZLEFT, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZLEFT, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                         case VideoneticsMoveCameraArgs.PTZRIGHT:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZRIGHT, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZRIGHT, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                         case VideoneticsMoveCameraArgs.PTZIN:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZIN, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZIN, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                         case VideoneticsMoveCameraArgs.PTZOUT:
-                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZOUT, PTZ_SPEED);
+                            httpClient.MoveCamera(cameraId, VideoneticsMoveCameraArgs.PTZOUT, VideoneticsMoveCameraArgs.PTZ_SPEED);
                             break;
                     }
                 }

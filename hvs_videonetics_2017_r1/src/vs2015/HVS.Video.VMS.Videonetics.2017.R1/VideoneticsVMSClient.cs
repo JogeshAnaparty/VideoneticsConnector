@@ -25,26 +25,25 @@
 
         #endregion
 
-        #region Constructor(s)
-
-
-        #endregion
-
         #region Method overrides
 
+        /// <summary>
+        /// Connect
+        /// </summary>
+        /// <returns></returns>
         public override bool Connect()
         {
             Log.Info("VideoneticsVMSClient::Connect");
-            // Kabir
-            // Don't really require this
-            // Commenting, test and delete
-            // GetRequestHttp("/REST/local/channel");
 
             client = new VideoneticsHttpClient(VMS);
             IsConnected = true;
             return true;
         }
 
+        /// <summary>
+        /// Disconnect
+        /// </summary>
+        /// <returns></returns>
         public override bool Disconnect()
         {
             IsConnected = false;
@@ -52,6 +51,10 @@
             return true;
         }
 
+        /// <summary>
+        /// Gets all Cameras from the VMS
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<CameraEntity> GetCameras()
         {
             List<VideoneticsCamera> cameras = new List<VideoneticsCamera>();
@@ -78,6 +81,10 @@
             return cameras;
         }
 
+        /// <summary>
+        /// Refresh Camera Status
+        /// </summary>
+        /// <param name="cameras"></param>
         protected override void RefreshCameraStatus(out List<CameraEntity> cameras)
         {
             cameras = GetCameras().ToList();
@@ -87,6 +94,11 @@
 
         #region Utilities
 
+        /// <summary>
+        /// GetRequestHttp
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <returns></returns>
         public string GetRequestHttp(string uri)
         {
             Log.Info("VideoneticsVMSClient::GetRequestHttp");

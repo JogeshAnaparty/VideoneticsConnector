@@ -16,7 +16,7 @@
         public const string PTZDOWN = "16";
         public const string PTZIN = "21";
         public const string PTZOUT = "22";
-
+        public const string PTZ_SPEED = "5";
         #endregion
 
         #region Properties
@@ -32,6 +32,11 @@
 
         #region Static Constructor
 
+        /// <summary>
+        /// New
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static VideoneticsMoveCameraArgs New(MoveCameraArgs args)
         {
             VideoneticsMoveCameraArgs moveCameraArgs = new VideoneticsMoveCameraArgs

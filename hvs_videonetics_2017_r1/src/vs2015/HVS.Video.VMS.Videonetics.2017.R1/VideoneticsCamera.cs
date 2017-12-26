@@ -19,12 +19,20 @@
 		public string RtspUrl => GetAttribute<string>("rtspUrl");
 		public string ChannelId => GetAttribute<string>("channelId");
 
-		#endregion
+        #endregion
 
-		#region Constructor(s)
+        #region Constructor(s)
 
-		public VideoneticsCamera() { }
+        /// <summary>
+        /// Constructor VideoneticsCamera with no arguments
+        /// </summary>
+        public VideoneticsCamera() { }
 
+        /// <summary>
+        /// Constructor VideoneticsCamera with arguments
+        /// </summary>
+        /// <param name="camera"></param>
+        /// <param name="vms"></param>
         public VideoneticsCamera(channelResult camera, VmsEntity vms)
         {
 			// Set default attributed. Active will be updated out of the constructor by calling status service
@@ -142,6 +150,9 @@
     #region VideoNetics specific entities
 
     // Based on the JSON data from VMS
+    /// <summary>
+    /// CameraEntity
+    /// </summary>
     class VMSCamera : CameraEntity
     {
         public int status { get; set; }
@@ -152,6 +163,9 @@
         public channelResult[] result { get; set; }
     }
 
+    /// <summary>
+    /// VideoneticsChannels
+    /// </summary>
     public class VideoneticsChannels 
     {
         public int status { get; set; }
@@ -162,7 +176,9 @@
         public channelResult[] result { get; set; }
     }
 
-
+    /// <summary>
+    /// channelResult
+    /// </summary>
     public class channelResult
     {
         public int id { get; set; }
@@ -194,6 +210,10 @@
         public int vocRecordingFlag { get; set; }
         public int noOfJobs { get; set; }
     }
+
+    /// <summary>
+    /// StartLiveResponse
+    /// </summary>
     public class StartLiveResponse
     {
         public int status { get; set; }
@@ -203,6 +223,10 @@
         public string uri { get; set; }
         public Session[] result { get; set; }
     }
+
+    /// <summary>
+    /// StartArchiveVideoResponse
+    /// </summary>
 	public class StartArchiveVideoResponse
 	{
 		public int status { get; set; }
@@ -212,6 +236,10 @@
 		public string uri { get; set; }
 		public Session[] result { get; set; }
 	}
+
+    /// <summary>
+    /// KeepLive
+    /// </summary>
 	public class KeepLive
     {
         public int status { get; set; }
@@ -221,12 +249,20 @@
         public string uri { get; set; }
         public object[] result { get; set; }
     }
+
+    /// <summary>
+    /// Session
+    /// </summary>
     public class Session
     {
         public long sesssionId { get; set; }
         public string hlsURL { get; set; }
         public CancellationTokenSource cancellationToken;
     }
+
+    /// <summary>
+    /// ChannelStatus
+    /// </summary>
     public class ChannelStatus
     {
         public int status { get; set; }
@@ -236,6 +272,10 @@
         public string uri { get; set; }
         public Status[] result { get; set; }
     }
+
+    /// <summary>
+    /// Status
+    /// </summary>
     public class Status
     {
         public int channelId { get; set; }

@@ -50,6 +50,10 @@
 
         #region Constructor(s)
 
+        /// <summary>
+        /// VideoneticsHttpClient
+        /// </summary>
+        /// <param name="vms"></param>
         public VideoneticsHttpClient(VmsEntity vms)
         {
             this.vms = vms;
@@ -60,6 +64,10 @@
 
         #region Methods
 
+        /// <summary>
+        /// Gets Channels List
+        /// </summary>
+        /// <returns></returns>
         public VideoneticsChannels GetChannelsList()
         {
             //string response = DoRequest(ChannelsRequestUri);
@@ -75,6 +83,10 @@
             return JsonConvert.DeserializeObject<VideoneticsChannels>(response.Result);
         }
 
+        /// <summary>
+        /// Gets Channels Status
+        /// </summary>
+        /// <returns></returns>
 	    public Status[] GetChannelsStatus()
 	    {
             //string response = DoRequest(ChannelStatusRequestUri);
@@ -86,6 +98,12 @@
             ChannelStatus statusInfo = JsonConvert.DeserializeObject<ChannelStatus>(response.Result);
 		    return statusInfo.result;
 	    }
+
+        /// <summary>
+        /// Gets Channel Status By ChannelId
+        /// </summary>
+        /// <param name="channelId"></param>
+        /// <returns></returns>
         public bool GetChannelStatus(string channelId)
         {
             //string response = DoRequest(ChannelStatusRequestUri);
@@ -119,6 +137,15 @@
             return false;
         }
 
+        /// <summary>
+        /// Starts Live Video
+        /// </summary>
+        /// <param name="clientId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="videoWidth"></param>
+        /// <param name="videoHeight"></param>
+        /// <param name="enableAudio"></param>
+        /// <returns></returns>
         public StartLiveResponse StartLiveVideo(string clientId, string channelId, uint videoWidth = DefaultCameraVideoWidth, uint videoHeight = DefaultCameraVideoHeight, uint enableAudio = DefaultCameraAudioEnabled)
         {
 	        var requestString = string.Format(StartLiveRequestUri, channelId, videoWidth, videoHeight, enableAudio);
@@ -153,6 +180,10 @@
             throw new InvalidOperationException($"An error occurred starting live for Camera {channelId}.");
         }
 
+        /// <summary>
+        /// Stops Live Video
+        /// </summary>
+        /// <param name="clientId"></param>
         public void StopLiveVideo(string clientId)
         {
             if (liveSessions.ContainsKey(clientId))
@@ -183,6 +214,16 @@
             }
         }
 
+        /// <summary>
+        /// Starts Archive Video
+        /// </summary>
+        /// <param name="clientId"></param>
+        /// <param name="channelId"></param>
+        /// <param name="startTimeStamp"></param>
+        /// <param name="videoWidth"></param>
+        /// <param name="videoHeight"></param>
+        /// <param name="enableAudio"></param>
+        /// <returns></returns>
         public StartArchiveVideoResponse StartArchiveVideo(string clientId, string channelId, long startTimeStamp, uint videoWidth = DefaultCameraVideoWidth,
 												   uint videoHeight = DefaultCameraVideoHeight, uint enableAudio = DefaultCameraAudioEnabled)
         {
@@ -214,6 +255,10 @@
             throw new InvalidOperationException($"An error occurred starting live for Camera {channelId}:\r\nError:\r\n{startArchiveResponse.message}");
         }
 
+        /// <summary>
+        /// Stops Archive Video
+        /// </summary>
+        /// <param name="clientId"></param>
         public void StopArchiveVideo(string clientId)
         {
             if (archiveSessions.ContainsKey(clientId))
@@ -246,6 +291,12 @@
             }
         }
 
+        /// <summary>
+        /// Move Camera
+        /// </summary>
+        /// <param name="channelId"></param>
+        /// <param name="commandId"></param>
+        /// <param name="speed"></param>
 		public void MoveCamera(string channelId, string commandId, string speed = "0")
         {
             var requestString = string.Format(PTZRequestUri, channelId, commandId, speed);
@@ -267,20 +318,13 @@
 
         #region Helpers
 
-        //private string DoRequest(string requestUri, bool post = false)
-        //{
-        //    try
-        //    {
-        //        HttpResponseMessage response = !post ? httpClient.GetAsync(requestUri).Result : httpClient.PostAsync(requestUri, null).Result;
-        //        return response.Content.ReadAsStringAsync().Result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Log.Error($"Request {httpClient.BaseAddress} ({requestUri}) Error: { ex.Message}");
-        //        return "{ 'message': '" + ex.Message + "'}";
-        //    }
-        //}
-
+        /// <summary>
+        /// Do http Request
+        /// </summary>
+        /// <param name="requestUri"></param>
+        /// <param name="timeout"></param>
+        /// <param name="post"></param>
+        /// <returns></returns>
         private async Task<string> DoRequest(string requestUri, uint timeout = RequestTimeout, bool post = false)
         {
 
@@ -306,6 +350,9 @@
             return result;
         }
 
+        /// <summary>
+        /// Initialize Client
+        /// </summary>
         private void InitializeClient()
         {
 	        Log.Debug($"Initializing http client to {vms.Name}...");
@@ -328,6 +375,12 @@
             //httpClient.Timeout = TimeSpan.FromMilliseconds(1000);
         }
 
+        /// <summary>
+        /// Keep session Alive in Async
+        /// </summary>
+        /// <param name="sessionId"></param>
+        /// <param name="cancellationTokenSource"></param>
+        /// <param name="keepAliveUri"></param>
         protected void KeepAliveAsync(long sessionId, CancellationTokenSource cancellationTokenSource, string keepAliveUri)
         {
             Task.Factory.StartNew(async() =>

@@ -15,20 +15,28 @@
 
 	    public const string VideoneticSDKNames = "Videonetics 2017 R1";
 
-	    #endregion
+        #endregion
 
-		#region Constructor(s)
+        #region Constructor(s)
 
-		public VideoneticsVMSClusterManager()
+        /// <summary>
+        /// VideoneticsVMSClusterManager
+        /// </summary>
+        public VideoneticsVMSClusterManager()
         {
             Log.Info($"Videonetics Connector: {VideoneticSDKNames}");
         }
 
-		#endregion
+        #endregion
 
-		#region Overrides
+        #region Overrides
 
-		public override VideoStreamingArgs StartLiveStream(CameraTaskArgs args)
+        /// <summary>
+        /// StartLiveStream
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public override VideoStreamingArgs StartLiveStream(CameraTaskArgs args)
 		{
 			//If in Rtsp, just perform base code
 			if (Configuration.TranscoderInputFormat == TranscoderInputFormat.Rtsp)
@@ -50,6 +58,11 @@
 			}
 		}
 
+        /// <summary>
+        /// CameraPlayback
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
 	    public override object CameraPlayback(CameraTaskArgs args)
 	    {
 			CheckVMS(args.Camera.HostId, true);
@@ -70,11 +83,29 @@
 			}
 		}
 
-	    #endregion
+        //public override object MoveCamera(CameraTaskArgs args)
+        //{
+        //    CheckVMS(args.Camera.HostId, true);
+        //    base.MoveCamera(args);
+        //    lock (syncObject)
+        //    {
+        //        if (args.Camera.IsPtz)
+        //        {
+        //            VMSManagers[args.Camera.HostId].MoveCamera(args);
+        //            return null;
+        //        }
+        //    }
+        //    throw new ArgumentOutOfRangeException($"Camera PTZ is {args.Camera.IsPtz}.");
+        //}
+        #endregion
 
-		#region Helpers
+        #region Helpers
 
-		public string GetVersion()
+        /// <summary>
+        /// GetVersion
+        /// </summary>
+        /// <returns></returns>
+        public string GetVersion()
 	    {
 		    return ApplicationHelper.GetProductVersion(VideoneticSDKNames);
 	    }
