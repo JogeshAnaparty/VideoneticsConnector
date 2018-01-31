@@ -15,15 +15,27 @@
     {
         #region Consts
 
-        public const string ChannelsRequestUri = "/REST/local/channel/";
-        public const string ChannelStatusRequestUri = "/REST/local/channel/status";
-        public const string StartLiveRequestUri = "/REST/local/startlive/{0}/{1}/{2}/{3}"; // channelId/widht/height/audioEnabled
-        public const string StopLiveRequestUri = "/REST/local/stoplive/{0}"; // sessionid
-        public const string LiveVideoKeepAliveRequestUri = "/REST/local/live/keepalive/{0}"; //sessionId;
-        public const string StartArchiveRequestUri = "/REST/local/startarchive/{0}/{1}/{2}/{3}/{4}"; // channelId/widht/height/starttimestamp/audioEnabled
-        public const string StopArchiveRequestUri = "/REST/local/stoparchive/{0}"; // sessionid
-        public const string ArchiveVideoKeepArchiveAliveRequestUri = "/REST/local/archive/keepalive/{0}"; //sessionId;
-        public const string PTZRequestUri = "/REST/local/ptz/channel/{0}/{1}/{2}"; //channelId/Ptz-Action/speed param;
+        //public const string ChannelsRequestUri = "/REST/local/channel/";
+        //public const string ChannelStatusRequestUri = "/REST/local/channel/status";
+        //public const string StartLiveRequestUri = "/REST/local/startlive/{0}/{1}/{2}/{3}"; // channelId/widht/height/audioEnabled
+        //public const string StopLiveRequestUri = "/REST/local/stoplive/{0}"; // sessionid
+        //public const string LiveVideoKeepAliveRequestUri = "/REST/local/live/keepalive/{0}"; //sessionId;
+        //public const string StartArchiveRequestUri = "/REST/local/startarchive/{0}/{1}/{2}/{3}/{4}"; // channelId/widht/height/starttimestamp/audioEnabled
+        //public const string StopArchiveRequestUri = "/REST/local/stoparchive/{0}"; // sessionid
+        //public const string ArchiveVideoKeepArchiveAliveRequestUri = "/REST/local/archive/keepalive/{0}"; //sessionId;
+        //public const string PTZRequestUri = "/REST/local/ptz/channel/{0}/{1}/{2}"; //channelId/Ptz-Action/speed param;
+
+        //BELOW API STRING'S(adding "i-apiserver") ARE BASED ON UPDATED PACKAGES FROM VIDEONETICS VMS TEAM
+
+        public const string ChannelsRequestUri = "/i-apiserver/REST/local/channel/";
+        public const string ChannelStatusRequestUri = "/i-apiserver/REST/local/channel/status";
+        public const string StartLiveRequestUri = "/i-apiserver/REST/local/startlive/{0}/{1}/{2}/{3}"; // channelId/widht/height/audioEnabled
+        public const string StopLiveRequestUri = "/i-apiserver/REST/local/stoplive/{0}"; // sessionid
+        public const string LiveVideoKeepAliveRequestUri = "/i-apiserver/REST/local/live/keepalive/{0}"; //sessionId;
+        public const string StartArchiveRequestUri = "/i-apiserver/REST/local/startarchive/{0}/{1}/{2}/{3}/{4}"; // channelId/widht/height/starttimestamp/audioEnabled
+        public const string StopArchiveRequestUri = "/i-apiserver/REST/local/stoparchive/{0}"; // sessionid
+        public const string ArchiveVideoKeepArchiveAliveRequestUri = "/i-apiserver/REST/local/archive/keepalive/{0}"; //sessionId;
+        public const string PTZRequestUri = "/i-apiserver/REST/local/ptz/channel/{0}/{1}/{2}"; //channelId/Ptz-Action/speed param;
 
         public const int DefaultRetryDelay = 5000; //ms
         public const int DefaultKeepAliveTimeout = 30000; //ms
@@ -309,9 +321,9 @@
             var response = moveResponse.Result;
             KeepLive moveCamera = JsonConvert.DeserializeObject<KeepLive>(response);
             if (moveCamera.code != ResponseStatusCode)            
-            {
                 Log.Error($"Request {httpClient.BaseAddress} ({requestString}) Error: { moveCamera.message}");
-            }
+            else
+                Log.Debug($"Request {httpClient.BaseAddress} ({requestString}) Message: PTZ command- { commandId}");
         }
 
         #endregion

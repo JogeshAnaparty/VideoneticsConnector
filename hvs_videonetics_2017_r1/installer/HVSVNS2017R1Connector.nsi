@@ -2,7 +2,7 @@ Section "SetVersion"
 	!ifdef version
 		!define PRODUCT_VERSION ${version}
 	!else
-		!define PRODUCT_VERSION "5.2.6"
+		!define PRODUCT_VERSION "5.2.8"
 	!endif
 SectionEnd
 

@@ -83,20 +83,25 @@
 			}
 		}
 
-        //public override object MoveCamera(CameraTaskArgs args)
-        //{
-        //    CheckVMS(args.Camera.HostId, true);
-        //    base.MoveCamera(args);
-        //    lock (syncObject)
-        //    {
-        //        if (args.Camera.IsPtz)
-        //        {
-        //            VMSManagers[args.Camera.HostId].MoveCamera(args);
-        //            return null;
-        //        }
-        //    }
-        //    throw new ArgumentOutOfRangeException($"Camera PTZ is {args.Camera.IsPtz}.");
-        //}
+        /// <summary>
+        /// MoveCamera
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public override object MoveCamera(CameraTaskArgs args)
+        {
+            CheckVMS(args.Camera.HostId, true);
+            lock (syncObject)
+            {
+                if (args.Camera.IsPtz)
+                {
+                    VMSManagers[args.Camera.HostId].MoveCamera(args);
+                    return null;
+                }
+
+                throw new ArgumentOutOfRangeException($"Camera PTZ is {args.Camera.IsPtz}.");
+            }
+        }
         #endregion
 
         #region Helpers

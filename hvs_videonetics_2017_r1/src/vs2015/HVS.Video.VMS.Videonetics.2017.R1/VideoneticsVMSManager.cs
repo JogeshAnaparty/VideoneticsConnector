@@ -141,15 +141,11 @@
         /// <param name="args"></param>
         public override void MoveCamera(CameraTaskArgs args)
         {            
-            base.MoveCamera(args);
             if (args.Camera.IsPtz)
             {
                 // TODO
                 // PTZ Implementation 
                 VideoneticsMoveCameraArgs moveArgs = VideoneticsMoveCameraArgs.New((MoveCameraArgs)args);                
-                VideoneticsCamera camera = (VideoneticsCamera)Cameras.FirstOrDefault(x => x.SourceId == args.Camera.SourceId);
-                if (camera == null)
-                    throw new InvalidOperationException($"Cannot find camera sourceId {args.Camera.SourceId}");
 
                 string cameraId = args.Camera.Attributes["channelId"].Value.ToString();
                 if (moveArgs.CameraMoveType == CameraMoveType.PTZ)
